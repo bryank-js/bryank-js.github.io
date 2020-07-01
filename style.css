@@ -1,0 +1,681 @@
+@charset "UTF-8";
+body {
+	overflow-x: hidden;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+.image-border
+{
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.13);
+}
+.container-right {
+	font-family: Roboto;
+	position: absolute;
+	z-index: 3;
+}
+.container-left {
+	font-family: 'Seaweed Script', cursive;
+	position: absolute;
+	color: #fff;
+	z-index: 3;
+	margin-top: 15px;
+	margin-left: 20px;
+	font-size: 1.4em;
+}
+.main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    background-size: 300px;
+    font-size: 3.0em;
+    font-weight: 600;
+    color: white;
+    margin: 30px 40px;
+    z-index: 1;
+}
+.container h1 {
+	font-family: "Lato", sans-serif;
+	color: #fff;
+	line-height: 1.6em;
+}
+.container h2 {
+	font-family: "Roboto", sans-serif;
+	color: #fff;
+	line-height: 0em;
+	font-size: 1.0em;
+	margin-left: 50px;
+	font-style: italic;
+}
+.hud {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	z-index: 1;
+	background-color: #66b9bf;
+	opacity: 0.7;
+}
+.nav-container {
+	position: fixed;
+	width: 100%;
+	height: 10%;
+	z-index: 2;
+	background-color: transparent;
+}
+.navbar-items {
+	list-style-type: none;
+    margin: 0;
+    position: fixed;
+    padding: 0;
+    right: 0;
+    float: right;
+    text-transform: uppercase;
+}
+.nav-container.scrolledDown {
+  	background-color: black !important;
+ 	opacity: 1 !important;
+  	transition: background-color 300ms linear; 
+}
+li {
+	float: left;
+}
+li a {
+	display: block;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	margin-right: 20px;
+	margin-top: 20px;
+}	
+.page {
+	padding: 50px 50px;
+	width: 100%;
+	height: 100%;
+}
+.pf-space {
+	position: relative;
+	top: 40px;
+	right: 500px;
+}
+#pf {
+	width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    -webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transition: 0.7s;
+	-moz-transition: 0.7s;
+	-ms-transition: 0.7s;
+}
+#pf:hover{
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-webkit-transition: 0.7s;
+	-moz-transition: 0.7s;
+	-ms-transition: 0.7s;
+}
+#border-space {
+	z-index: 1;
+	position: relative;
+	width: 280px;
+    height: 280px;
+	top: -240px;
+    left: 14px;
+    border: solid;
+    border-color: red;
+  }
+.border-track {
+    z-index: 2;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    top: -2px;
+    left: -12px;
+    border: solid;
+    border-width: 5px;
+    border-color: #4F555C;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.background1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 0;
+	height: 600px;
+	width: 450px;
+	background-image: linear-gradient(to left, transparent, white), url("images/face_desktop.jpg");
+}
+.loading-screen {
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y:hidden;
+	top: 0;
+	left: 0;
+	background-color: white;
+	z-index: 4;
+	text-align: center;
+}
+.divPieceO {
+	width:25px;
+    height:25px;
+    margin:2px;
+    float: left;
+    background-color: #ffe650;
+}
+#pieceO {
+	position: absolute;
+	z-index: 6;
+	height: 60px;
+	width: 60px;
+	animation-name: pieceSet1-animation;
+	-webkit-animation-name: pieceSet1-animation;
+	-moz-animation-name: pieceSet1-animation;
+	-ms-animation-name: pieceSet1-animation;
+	animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+	-moz-animation-duration: 0.25s;
+	-ms-animation-duration: 0.25s;
+	margin-left: 5px;
+	margin-top: 90px;
+	display: none;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+}
+.divPieceJ {
+    width:25px;
+    height:25px;
+   	margin:2px;
+    background-color: #71bbd4;
+    float: left;
+}
+.divPieceL {
+   	width:25px;
+   	height:25px;
+    margin:2px;
+    background-color: #ffb732;
+    float: right;
+}
+.divPieceZ {
+    width:25px;
+    height:25px;
+   	margin:2px;
+   	background-color: #ff5719;
+    float: left;
+}
+#Z2 {
+	margin-left: 29px;
+}
+#pieceZ {
+	position: absolute;
+	width: 90px;
+	height: 60px;
+	margin-left: 120px;
+	margin-top: 90px;
+	animation-name: pieceSet2-animation;
+	-webkit-animation-name: pieceSet2-animation;
+	animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+	display: none;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+#pieceL1{
+	position: absolute;
+	height: 90px;
+	width: 60px;
+	margin-left: 32px;
+	margin-top: 90px;
+	animation-name: pieceSet2-animation;
+	-webkit-animation-name: pieceSet2-animation;
+	animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+	display: none;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+#pieceL2 {
+	position: absolute;
+	-ms-transform: rotate(-90deg); /* IE 9 */
+ 	-webkit-transform: rotate(-90deg); /* Safari prior 9.0 */
+	transform: rotate(-90deg);
+	height: 90px;
+	width: 60px;
+	margin-left: 20px;
+	margin-top: 90px;
+	animation-name: pieceSet3-animation;
+	-webkit-animation-name: pieceSet3-animation;
+	animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+	display: none;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+#pieceJ1 {
+	position: absolute;
+	width: 90px;
+	height: 60px;
+	margin-left: 120px;
+	margin-top: 90px;
+	animation-name: pieceSet1-animation;
+	-webkit-animation-name: pieceSet1-animation;
+	animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+	display: none;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+#pieceJ2 {
+	position: absolute;
+	width: 90px;
+	height: 60px;
+	-ms-transform: rotate(180deg); /* IE 9 */
+ 	-webkit-transform: rotate(180deg); /* Safari prior 9.0 */
+	transform: rotate(180deg);
+	margin-left: 117px;
+	margin-top: 90px;
+	animation-name: pieceSet4-animation;
+	-webkit-animation-name: pieceSet4-animation;
+	animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+	display: none;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.divPieceI {
+ 	width:25px;
+    height:25px;
+   	margin:4px;
+    background-color: #58cf85;
+}
+#pieceI {
+	position: absolute;
+	width: 30px;
+	height: 110px;
+	margin-left: 89px;
+	margin-top: 90px;
+	animation-name: pieceSet4-animation;
+	-webkit-animation-name: pieceSet4-animation;
+	animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+	display: none;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.pieces {
+	position: absolute;
+	z-index: 6;
+	display: inline-block;
+	margin-left: -110px;
+}
+#play-screen {
+	position: absolute;
+	z-index: 5;
+	width: 205px;
+	height: 210px;
+	border: 2px solid black;
+	display: inline-block;
+	margin-top: 150px;
+	margin-left: -110px;
+	
+}
+@keyframes pieceSet1-animation {
+	100% {margin-top: 300px;}
+}
+@keyframes pieceSet2-animation {
+	100% {margin-top: 271px;}
+}
+@keyframes pieceSet3-animation {
+	100% {margin-top: 227px;}
+}
+@keyframes pieceSet4-animation {
+	100% {margin-top: 240px;}
+}
+#about-main {
+	margin-top: 600px;
+	position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    padding: 50px 0px;
+}
+.section-about-main {
+	background-color:  #fff;
+    color: #4F555C;
+    width: 100%;
+    height: 100%;
+}
+#about-cc {
+	position: relative;
+	top: 2000px;
+	/*Fix infrastructure such that additional 
+	#about sections move the parallax/exp section downwards*/
+}
+.section-exp {
+	position: relative;
+	background-color: #f2f2f0;
+    color: #4F555C;
+    width: 100%;
+    height: 2200px;
+}
+.section-system {
+	position: relative;
+	background: radial-gradient(#fff, #66b9bf);
+    color: #4F555C;
+    width: 100%;
+    height: 700px;
+    /*Why doesn't the 100% height fix work for system like for writing?*/
+}
+.section-writing {
+	position: relative;
+	background: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 100px 0;
+    /*Would changing height to just a fixed 100% allow adjust-to-content?
+    --> YES! You can honestly replicate the advantages of a fixed height by
+    utilizing margins*/
+}
+.section-about-main .container {
+	margin-right: 15%;
+	margin-left: 15%;
+	padding-right: 15px;
+    padding-left: 15px;
+} 
+.section-about-main .section-title {
+	color: #ff7e30;
+}
+.section-exp .section-title {
+	color: #66b9bf;
+}
+.section-system .section-title {
+	color: #ff7e30;
+	padding-top: 50px;
+}
+.section-writing .section-title {
+	color: #66b9bf;
+	padding-top: 50px;
+}
+.section-title {
+	line-height: 1.1;
+	margin: 0 0 20px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Lato";
+}
+.section-title-border {
+	background: rgba(0, 0, 0, 0.13);
+	margin: 4px auto 45px;
+	width: 70px;
+    height: 3px;
+}
+.intro-quote::before{
+	content: '“';
+    position: absolute;
+    font-size: 120px;
+    top: -60px;
+    font-family: "Neuton";
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.13);
+}
+.timeline-content h4 {
+	margin: 0;
+}
+.section-about-main .intro-quote:before{
+	left: -20px;
+}
+.section-exp .intro-quote:before{
+	left: 0px;
+}
+.section-system .intro-quote:before{
+	left: 30px;
+}
+.section-writing .intro-quote:before{
+	left: 0px;
+}
+.intro-quote{
+	font-family: "Neuton", serif;
+	font-weight: 400;
+	position: relative;
+	font-size: 30px;
+}
+.intro-quote-left{
+	width: 33.33%;
+}
+.intro-quote-center{
+	text-align: center;
+	margin: -10px auto; 
+}
+.section-exp .intro-quote-center {
+	width: 75%;
+}
+.section-system .intro-quote-center {
+	width: 75%;
+}
+.section-writing .intro-quote-center {
+	width: 75%;
+}
+.content-body-right p {
+	float: left;
+	position: relative;
+	top: -210px;
+	left: 400px;
+	font-family: "Lato", sans-serif;
+	font-size: 19px;
+    opacity: 0.75;
+    letter-spacing: 0px;
+    width: 60%;
+    line-height: 35px;
+    margin: 10px 0;
+}
+.about-header-cover {
+	width: 1200px;
+	margin-top: -100px;
+	position: absolute;
+    padding: 0;
+    right: 0;
+    height: 300px;
+    background-color: grey;
+}
+.about-header-suffix {
+	width: 600px;
+	margin-top: -100px;
+	position: absolute;
+    padding: 0;
+  	left: 0;
+    height: 200px;
+    background-color: #011018;
+}
+.parallax {
+	width: 1300px;
+	margin-top: -150px;
+	margin-left: -50px;
+	position: absolute;
+	left: 0;
+	z-index: -1;
+    padding: 0;
+    height: 2500px;
+ 	background-image: url("images/img_parallax.jpg");
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+#experience {
+	position: absolute;
+	top: 1500px;
+	width: 70%;
+	right: 0; bottom: 0; left: 30px;
+    padding: 50px 0px;
+}
+.timeline-body {
+	margin: 30px;
+}
+.timeline {
+	list-style: none;
+	box-sizing: border-box;
+}
+.timeline:before{
+	position: absolute;
+	z-index: 0;
+	content: '';
+    top: 279px;
+    bottom: 0;
+    width: 4px;
+    background: #e0e0e0;
+    left: 20%;
+    margin-left: -6px;
+}
+.timeline-header{
+	width: 80%;
+	background-color: #66b9bf;
+	color: #fff;
+	text-align: left;
+	margin: 0 auto; 
+	margin-top: 20px;
+	font-family: "Lato", sans-serif;
+	font-size: 1.5em;
+	z-index: 1;
+	position: relative;
+	line-height: 2.0;
+	padding-left: 15px;
+}
+.timeline-content {
+	font-family: "Lato", sans-serif;
+	background: white;
+	display: block;
+	overflow: auto;
+	/*display and overflow properties substitute height property to 
+	auto-fit div height to content –– can I implement them in other div's?*/
+	width: 500px;
+	padding: 10px 30px;
+	margin-left: 160px;
+	margin-top: -15px;
+	color: #696969;
+}
+/*.timeline-content:before {
+	content: '';
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-right: 8px solid white;
+	position: absolute;
+	left: -8px;
+	top: 23px;
+}*/
+.timeline-time{
+	font-family: "Lato", sans-serif;
+	font-weight: bolder;
+	position: relative;
+	top: 15px;
+	color: #b3b3b3;
+}
+.timeline-icon {
+	position: absolute;
+	z-index: 1;
+	height: 10px;
+	width: 10px;
+	background: grey;
+	border-radius: 50%;
+	left: 19%;
+}
+.flaticon-students-cap_46955 {
+	margin-right: 15px;
+}
+#system {
+	top: 3900px;
+}
+.content-system {
+	margin: 50px 40px;
+	text-align: center;
+	font-family: "Lato", sans-serif;
+	font-size: 25px;
+    font-weight: 600;
+}
+.content-system a {
+    color: #4F555C;
+    text-decoration: none;
+}
+.content-system-item {
+	margin: 10px;
+}
+.content-system-item a:hover {
+    color: #07889b;
+    transition: 0.3s;
+}
+#writing {
+	top: 3800px;
+}
+.content-body-row {
+	margin: 50px;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.content-body-left{
+	width: 350px;
+	margin-left: 35px;
+}
+.content-writing {
+	font-family: "Lato", sans-serif;
+}
+.content-writing-section {
+	background-color: rgba(0, 0, 0, 0.03);
+	padding: 20px;
+	border-radius: 1%;
+}
+.content-writing-image {
+	margin: 0 auto;
+	width: 300px;
+	height: 220px;
+	background-color: grey;
+}
+.content-writing-title {
+	color: black;
+	font-weight: 600;
+	font-size: 25px;
+	width: 100%;
+	line-height: 1.0em;	
+	margin: 15px 0px;
+}
+.content-writing-date {
+	font-style: italic;
+	margin: 10px 0px;
+	width: 100%;
+}
+.content-writing-desc {
+	width: 100%;
+	line-height: 1.5em;
+	font-weight: lighter;
+}
+.content-writing-readhere {
+	text-align: center;
+	margin: 20px 0;
+	display: inline-block;
+	background-color:#66b9bf;
+	width: 100%;
+	color: white;
+	padding: 15px 0;
+}
+.content-writing-readhere:hover {
+	background-color:#ff7e30;
+	transition: 0.3s;
+}
+@media only screen  /*iPhone 6-8 RD PORTRAIT*/
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { 
+	.nav-container {
+		height: 10%;
+}
+}
