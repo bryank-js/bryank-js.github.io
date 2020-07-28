@@ -35,7 +35,11 @@ body {
     margin: 30px 40px;
     z-index: 1;
 }
+.left-right {
+	display: flex;
+}
 .container h1 {
+	margin-top: -10px;
 	font-family: "Lato", sans-serif;
 	color: #fff;
 	line-height: 1.6em;
@@ -43,10 +47,12 @@ body {
 .container h2 {
 	font-family: "Roboto", sans-serif;
 	color: #fff;
-	line-height: 0em;
-	font-size: 1.0em;
-	margin-left: 50px;
-	font-style: italic;
+	font-size: 0.4em;
+	height: 100%;
+	width: 25%;
+	margin-left: 35px;
+	margin-top: -10px;
+	font-weight: 100;
 }
 .hud {
 	position: absolute;
@@ -56,12 +62,13 @@ body {
 	height: 600px;
 	overflow: hidden;
 	z-index: 1;
-	background-color: #66b9bf;
-	opacity: 0.7;
+	background-color: black;
+	opacity: 0.6;
 }
 .nav-container {
 	position: fixed;
 	width: 100%;
+	top: 0;
 	height: 10%;
 	z-index: 2;
 	background-color: transparent;
@@ -73,7 +80,6 @@ body {
     padding: 0;
     right: 0;
     float: right;
-    text-transform: uppercase;
 }
 .nav-container.scrolledDown {
   	background-color: black !important;
@@ -98,7 +104,7 @@ li a {
 }
 .pf-space {
 	position: relative;
-	top: 40px;
+	top: 100px;
 	right: 500px;
 }
 #pf {
@@ -169,7 +175,7 @@ li a {
     height:25px;
     margin:2px;
     float: left;
-    background-color: #ffe650;
+    background-color: #ff7e30;
 }
 #pieceO {
 	position: absolute;
@@ -196,21 +202,21 @@ li a {
     width:25px;
     height:25px;
    	margin:2px;
-    background-color: #71bbd4;
+    background-color: #66b9bf;
     float: left;
 }
 .divPieceL {
    	width:25px;
    	height:25px;
     margin:2px;
-    background-color: #ffb732;
+    background-color: #ff7e30;
     float: right;
 }
 .divPieceZ {
     width:25px;
     height:25px;
    	margin:2px;
-   	background-color: #ff5719;
+   	background-color: #66b9bf;
     float: left;
 }
 #Z2 {
@@ -296,7 +302,7 @@ li a {
  	width:25px;
     height:25px;
    	margin:4px;
-    background-color: #58cf85;
+    background-color: black;
 }
 #pieceI {
 	position: absolute;
@@ -349,7 +355,7 @@ li a {
 }
 .section-about-main {
 	background-color:  #fff;
-    color: #4F555C;
+    color: black;
     width: 100%;
     height: 100%;
 }
@@ -365,10 +371,11 @@ li a {
     color: #4F555C;
     width: 100%;
     height: 2200px;
+    border-radius: 1%;
 }
 .section-system {
 	position: relative;
-	background: radial-gradient(#fff, #66b9bf);
+	background: radial-gradient(#fff, #ff7e30);
     color: #4F555C;
     width: 100%;
     height: 700px;
@@ -384,33 +391,62 @@ li a {
     --> YES! You can honestly replicate the advantages of a fixed height by
     utilizing margins*/
 }
+.section-contact {
+	position: relative;
+	background: black;
+    color: white;
+    width: 100%;
+    height: 300px;
+}
+.section-about-main .content-col-right {
+	margin-top: -50px;
+}
 .section-about-main .container {
 	margin-right: 15%;
 	margin-left: 15%;
 	padding-right: 15px;
     padding-left: 15px;
-} 
-.section-about-main .section-title {
-	color: #ff7e30;
-}
-.section-exp .section-title {
-	color: #66b9bf;
-}
-.section-system .section-title {
-	color: #ff7e30;
+} .section-system .section-title {
 	padding-top: 50px;
 }
 .section-writing .section-title {
-	color: #66b9bf;
 	padding-top: 50px;
+}
+.section-contact .section-title {
+	padding-top: 50px;
+	color: white;
+}
+.section-contact .section-title {
+	padding-top: 50px;
+	color: white;
+}
+.section-contact .section-title-border {
+	background: white;
+}
+.section-contact-body {
+	text-align: center;
+	font-family: "Roboto";
+}
+.copyright {
+	margin-top: 50px;
+	text-align: center;
+	font-family: "Roboto";
+	font-size: 10px;
+}
+.wip {
+	width: 100%;
+	height: 100%;
+	margin-left: -50px;
+	text-align: center;
+	font-family: "Roboto";
 }
 .section-title {
 	line-height: 1.1;
 	margin: 0 0 20px;
     text-align: center;
     font-size: 25px;
+    color: black;
     letter-spacing: 1px;
-    text-transform: uppercase;
     font-weight: 700;
     font-family: "Lato";
 }
@@ -439,13 +475,13 @@ li a {
 	left: 0px;
 }
 .section-system .intro-quote:before{
-	left: 30px;
-}
-.section-writing .intro-quote:before{
 	left: 0px;
 }
+.section-writing .intro-quote:before{
+	left: -20px;
+}
 .intro-quote{
-	font-family: "Neuton", serif;
+	font-family: "Roboto", serif;
 	font-weight: 400;
 	position: relative;
 	font-size: 30px;
@@ -459,9 +495,11 @@ li a {
 }
 .section-exp .intro-quote-center {
 	width: 75%;
+	font-size: 25px;
 }
 .section-system .intro-quote-center {
-	width: 75%;
+	width: 60%;
+	font-size: 25px;
 }
 .section-writing .intro-quote-center {
 	width: 75%;
@@ -539,7 +577,7 @@ li a {
 }
 .timeline-header{
 	width: 80%;
-	background-color: #66b9bf;
+	background-color: #ff7e30;
 	color: #fff;
 	text-align: left;
 	margin: 0 auto; 
@@ -562,7 +600,7 @@ li a {
 	padding: 10px 30px;
 	margin-left: 160px;
 	margin-top: -15px;
-	color: #696969;
+	color: black;
 }
 /*.timeline-content:before {
 	content: '';
@@ -610,11 +648,14 @@ li a {
 	margin: 10px;
 }
 .content-system-item a:hover {
-    color: #07889b;
+    color: #fc5f00;
     transition: 0.3s;
 }
 #writing {
 	top: 3800px;
+}
+#contact {
+	top: 3900px;
 }
 .content-body-row {
 	margin: 50px;
@@ -637,6 +678,7 @@ li a {
 .content-writing-image {
 	margin: 0 auto;
 	width: 300px;
+	border-radius: 10%;
 	height: 220px;
 	background-color: grey;
 }
