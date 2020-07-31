@@ -378,7 +378,7 @@ li a {
 	background: radial-gradient(#fff, #ff7e30);
     color: #4F555C;
     width: 100%;
-    height: 700px;
+    height: 750px;
     /*Why doesn't the 100% height fix work for system like for writing?*/
 }
 .section-writing {
